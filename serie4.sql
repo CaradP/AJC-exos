@@ -1,9 +1,26 @@
 -- Série 4 : (Jointure)
+USE hr;
 -- 1. Ecrivez une requête pour afficher le nom, le numéro de département et le département de
 -- tous les employés.
+SELECT e.last_name, department_id, d.department_name
+FROM employees e JOIN departments d
+USING (department_id);
 -- 2. Créez une liste unique de tous les postes du département 30.
+SELECT DISTINCT jobs.job_title
+FROM employees JOIN jobs
+USING (job_id)
+WHERE department_id = 30;
 -- 3. Ecrivez une requête pour afficher le nom, le département et la localisation de tous les
 -- employés qui touchent une commission.
+SELECT CONCAT(e.last_name, ' ', e.first_name) Employee, d.department_name, CONCAT(l.city, ', ', c.country_name) Location
+FROM employees e
+JOIN departments d
+ON d.department_id = e.department_id
+JOIN locations l
+ON l.location_id = d.location_id
+JOIN countries c
+ON c.country_id = l.country_id
+WHERE commission_pct IS NOT NULL;
 -- 4. Affichez le nom et le nom du département pour tous les employés dont le nom contient la
 -- lettre A.
 -- 5. Ecrivez une requête pour afficher le nom, le poste, le numéro de département et le
