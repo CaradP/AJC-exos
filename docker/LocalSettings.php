@@ -55,10 +55,10 @@ $wgEmailAuthentication = true;
 
 ## Database settings
 $wgDBtype = "mysql";
-$wgDBserver = "172.27.0.2";
+$wgDBserver = "database";
 $wgDBname = "my_wiki";
-$wgDBuser = "cara";
-$wgDBpassword = "mdp";
+$wgDBuser = "root";
+$wgDBpassword = "rootmdp";
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -87,7 +87,7 @@ $wgUseInstantCommons = false;
 # Periodically send a pingback to https://www.mediawiki.org/ with basic data
 # about this MediaWiki instance. The Wikimedia Foundation shares this data
 # with MediaWiki developers to help guide future development efforts.
-$wgPingback = false;
+$wgPingback = true;
 
 # Site language code, should be one of the list in ./includes/languages/data/Names.php
 $wgLanguageCode = "fr";
@@ -100,14 +100,14 @@ $wgLocaltimezone = "UTC";
 ## be publicly accessible from the web.
 #$wgCacheDirectory = "$IP/cache";
 
-$wgSecretKey = "246a8b469e005aebbcb8acd95ad2408d0d0d8159f64bb56aed58b99e82ba0334";
+$wgSecretKey = "77dc7b1a08fb21be7853f24fa9bfa7b68972d65c787e93427263d569033574cf";
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "63f71efd85dd147f";
+$wgUpgradeKey = "4c5ffb98af4a761b";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
